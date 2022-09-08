@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="UTF-8">
+</header>
+
+<body>
+
+    <form>
+        <input placeholder="type message..." type="text" name="message"></input>
+        <button type="submit">Send</button>
+    </form>
+    <br />
+    Message from Powerbuilder:
+    <pre>
+
+    </pre>
+
+    <script>
+        function CallPBEvent() {
+
+            //document.querySelector('pre').innerText = JSON.stringify(window.webBrowser.ue_getstring);
+            //var ret = ;
+            //alert(ret);
+        }
+
+        document.querySelector('form').onsubmit = (e) => {
+            e.preventDefault();
+            window.webBrowser.ue_getstring(e.target.message.value);
+        }
+
+    </script>
+</body>
+
+</html>
